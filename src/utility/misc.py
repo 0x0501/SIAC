@@ -33,7 +33,7 @@ from aqt import mw
 from aqt.qt import *
 from aqt.utils import tooltip, showInfo
 from urllib.parse import urlparse
-from anki.utils import isMac, isLin
+from anki.utils import is_mac, is_lin
 from PyQt6.QtPrintSupport import QPrinter
 
 
@@ -403,10 +403,10 @@ def find_pdf_files_in_dir_recursive(directory, cut_path=True):
 def load_rust_lib():
     """ Attempt to load the Rust library which should be in the addon data folder. """
 
-    if isLin:
+    if is_lin:
         # no built lib for linux yet
         return
-    lib  = "siacrs.so" if isMac else "siacrs.pyd"
+    lib  = "siacrs.so" if is_mac else "siacrs.pyd"
     path = get_application_data_path()
     if not os.path.isdir(path):
         os.mkdir(path)

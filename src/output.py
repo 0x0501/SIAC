@@ -25,7 +25,7 @@ from aqt import mw
 from aqt.utils import tooltip
 import typing
 from typing import Tuple, List, Optional, Dict, Callable
-
+from aqt import theme
 from .notes import get_pdf_info
 from .special_searches import get_suspended
 from .web.sidebar import Sidebar
@@ -1072,7 +1072,8 @@ class UI:
             for ix, c in enumerate(changes):
                 html += f"{ix + 1}. {c}<br>"
         notes.append(("Changelog", html))
-        nm      = mw.pm.night_mode()
+        nm      = theme.theme_manager.night_mode
+
 
 
         chr_v   = utility.misc.chromium_version()

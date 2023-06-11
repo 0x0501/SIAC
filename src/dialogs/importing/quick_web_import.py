@@ -20,7 +20,7 @@ import urllib
 
 # TODO: tidy up, make config accessible from either settings or describe in config.md
 import sip
-from anki.utils import isMac
+from anki.utils import is_mac
 from aqt import mw
 from aqt.qt import *
 from aqt.utils import tooltip
@@ -115,7 +115,7 @@ class QuickWebImport(QWidget):
         self.toplayout.addWidget(zoom_in)
 
 
-        if not isMac:
+        if not is_mac:
             back_btn.setMaximumWidth(back_btn.fontMetrics().boundingRect(" < ").width() + 15)
             reload_btn.setMaximumWidth(reload_btn.fontMetrics().boundingRect(u"\u21BB").width() + 15)
             forward_btn.setMaximumWidth(forward_btn.fontMetrics().boundingRect(" > ").width() + 15)
@@ -309,7 +309,7 @@ class QuickImportBrowserTabs(QTabWidget):
         self.tabCloseRequested.connect(self._tab_close)
 
         # maybe that fixes tabs being centered on mac
-        if isMac:
+        if is_mac:
             self.setStyleSheet("""
                 QTabWidget::tab-bar {
                     left: 0;

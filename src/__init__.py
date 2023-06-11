@@ -21,7 +21,7 @@ from aqt import mw, gui_hooks
 from aqt.qt import *
 from anki.hooks import wrap, addHook
 import aqt
-from anki.utils import isMac, isLin
+from anki.utils import is_mac, is_lin
 import aqt.webview
 from aqt.addcards import AddCards
 from anki.notes import Note
@@ -60,6 +60,7 @@ from .cmds.cmds_search import search_by_tags
 from .menubar import Menu
 from .web.reading_modal import Reader
 from .output import UI
+from aqt import theme
 
 
 
@@ -73,7 +74,7 @@ def init_addon():
         state.dev_mode = True
 
     if hasattr(mw.pm, "night_mode"):
-        state.set_nightmode(mw.pm.night_mode())
+        state.set_nightmode(theme.theme_manager.night_mode)
 
     gui_hooks.reviewer_did_answer_card.append(on_reviewer_did_answer)
 

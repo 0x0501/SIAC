@@ -23,7 +23,7 @@ import aqt.editor
 import aqt.stats
 from anki.notes import Note
 from aqt.utils import tooltip, showInfo
-from anki.utils import isMac, isLin
+from anki.utils import is_mac, is_lin
 import os
 import time
 import urllib.parse
@@ -154,7 +154,7 @@ def expanded_on_bridge_cmd(handled: Tuple[bool, Any], cmd: str, self: Any) -> Tu
             folder += "/"
         if os.path.isdir(folder):
             try:
-                if isLin:
+                if is_lin:
                         import subprocess
                         subprocess.check_call(['xdg-open', '--', folder])
                 else:
@@ -813,7 +813,7 @@ def expanded_on_bridge_cmd(handled: Tuple[bool, Any], cmd: str, self: Any) -> Tu
                 mw.moveToState("review")
                 mw.activateWindow()
                 # workaround, as activateWindow doesn't seem to bring the main window on top on OSX
-                if isMac:
+                if is_mac:
                     mw.raise_()
             else:
                 tooltip("Failed to create filtered deck.\n"+message)

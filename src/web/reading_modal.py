@@ -1849,7 +1849,8 @@ class Reader:
 
                 s_html += "<tr class='siac-cl-row'><td><div contenteditable class='siac-pdf-main-color w-100'>%s</div></td></tr>" % (sentence.replace("`", "&#96;"))
             s_html += "</table>"
-            model_id = cls._editor.note.model()['id']
+            model_id = cls._editor.note.note_type()['id']
+            
 
             # if another Send to Field has been executed before, and the note type is the same, add another button
             # to directly send the cloze to that last used field.
