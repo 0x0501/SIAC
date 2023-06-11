@@ -40,6 +40,7 @@
                 <textarea :id="'ei_'+path.replace(' ', '-')" :value="content">
                 </textarea>
           </div>
+        </div>
     </div>
     <!-- Create File modal -->
     <div v-if='createPath && createPath.length' class='siac-md-create-file-modal-wrapper'>

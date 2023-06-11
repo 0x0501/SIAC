@@ -307,10 +307,7 @@ def insert_scripts():
     addon_id    = utility.misc.get_addon_id()
     port        = mw.mediaServer.getPort()
 
-    # compatibility with newest pdf.js version needs more testing, until then, use old one
-    chromium_v  = utility.misc.chromium_version()
-    # pdfjs_v     = "2.6.347" if chromium_v  > "76" else "2.4.456"
-    pdfjs_v     = "2.4.456"
+    pdfjs_v     = "2.6.347"
 
     mw.addonManager.setWebExports(addon_id, ".*\\.(js|css|map|png|svg|ttf|woff2?|bcmap)$")
 

@@ -255,8 +255,7 @@ class Reader:
 
     sidebar             : ReaderSidebar             = ReaderSidebar()
 
-    # self.pdfjs_v            : str                   = "2.6.347" if utility.misc.chromium_version()  > "76" else "2.4.456"
-    pdfjs_v             : str                       = "2.4.456"
+    pdfjs_v             : str                       = "2.6.347"
 
 
      

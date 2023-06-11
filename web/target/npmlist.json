@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"anki-search-in-add-card","dependencies":{"core-js":{"version":"3.9.1"},"elliptic":{"version":"6.5.4"},"vue":{"version":"2.6.12"},"webpack-cli":{"version":"3.3.12"},"webpack":{"version":"4.46.0"}}}
